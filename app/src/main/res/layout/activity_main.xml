@@ -24,6 +24,7 @@
                 android:textSize="24sp" />
 
             <TextView
+                android:id="@+id/level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_0"
@@ -47,6 +48,7 @@
                 android:textSize="24sp" />
 
             <TextView
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/a5"
@@ -70,6 +72,7 @@
                 android:textSize="24sp" />
 
             <TextView
+                android:id="@+id/hp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_0"
@@ -120,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/the_first_note_button"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/music_note" />
+                android:background="@drawable/note_state" />
         </LinearLayout>
 
         <View
@@ -139,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/the_first_note_button"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/music_note" />
+                android:background="@drawable/note_state" />
         </LinearLayout>
 
         <View
@@ -158,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/the_first_note_button"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/music_note" />
+                android:background="@drawable/note_state" />
         </LinearLayout>
 
         <View
