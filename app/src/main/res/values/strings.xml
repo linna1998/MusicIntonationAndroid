@@ -8,4 +8,8 @@
     <string name="hp">HP:</string>
     <string name="confirm">Confirm</string>
     <string name="the_first_note_button">The first note button</string>
+    <string name="restart">RESTART</string>
+    <string name="start">START</string>
+    <string name="start_notation">Here I\'m going to start the Music Innotation game!</string>
+    <string name="end_notation">Your final score is:</string>
 </resources>

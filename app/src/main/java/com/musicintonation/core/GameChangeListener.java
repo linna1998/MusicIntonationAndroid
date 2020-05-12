@@ -1,5 +1,5 @@
 package com.musicintonation.core;
 
 public interface GameChangeListener {
-  void gameEnded();
+  void gameEnded(int score);
 }

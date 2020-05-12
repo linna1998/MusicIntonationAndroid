@@ -1,8 +1,7 @@
 package com.musicintonation;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -10,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.musicintonation.core.GameChangeListener;
 import com.musicintonation.core.GeneralInstrumentAndroid;
 import com.musicintonation.core.Instrumental;
 import com.musicintonation.core.MusicIntonationImplementation;
@@ -20,7 +20,7 @@ import java.util.List;
 
 import static com.musicintonation.core.MusicIntonationImplementation.NOTE_COUNT;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements GameChangeListener {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     Instrumental instrumental = new GeneralInstrumentAndroid();
     final MusicIntonationInterface musicIntonation = new MusicIntonationImplementation(instrumental);
+    musicIntonation.addGameChangeListener(this);
 
     musicIntonation.startNewGame();
 
@@ -83,24 +84,11 @@ public class MainActivity extends AppCompatActivity {
   }
 
   @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    // Inflate the menu; this adds items to the action bar if it is present.
-    getMenuInflater().inflate(R.menu.menu_main, menu);
-    return true;
-  }
-
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-    // Handle action bar item clicks here. The action bar will
-    // automatically handle clicks on the Home/Up button, so long
-    // as you specify a parent activity in AndroidManifest.xml.
-    int id = item.getItemId();
-
-    //noinspection SimplifiableIfStatement
-    if (id == R.id.action_settings) {
-      return true;
-    }
-
-    return super.onOptionsItemSelected(item);
+  public void gameEnded(int score) {
+    System.out.println("score in main activity: " + score);
+    Intent intent = new Intent();
+    intent.setClass(MainActivity.this, EndGameActivity.class);
+    intent.putExtra("SCORE", score);
+    startActivity(intent);
   }
 }

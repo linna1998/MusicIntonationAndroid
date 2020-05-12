@@ -9,6 +9,5 @@
     <item android:drawable="@drawable/selected_note" android:state_focused="true" android:state_pressed="false" android:state_selected="true" />
 
     <!-- Pressed -->
-    <!--<item android:state_selected="true" android:state_pressed="true" android:drawable="@drawable/selected_note" />-->
     <item android:drawable="@drawable/selected_note" android:state_pressed="true" />
 </selector>

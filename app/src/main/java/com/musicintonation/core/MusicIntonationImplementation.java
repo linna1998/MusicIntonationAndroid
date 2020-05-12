@@ -106,7 +106,7 @@ public class MusicIntonationImplementation implements MusicIntonationInterface {
 
     if (healthPoints == 0) {
       for (GameChangeListener listener : gameChangeListeners) {
-        listener.gameEnded();
+        listener.gameEnded(level);
       }
     }
   }
