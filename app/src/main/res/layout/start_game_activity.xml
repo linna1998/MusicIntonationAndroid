@@ -36,5 +36,16 @@
 
     </LinearLayout>
 
+    <GridLayout
+        android:id="@+id/center_notes"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/south"
+        android:layout_below="@id/north"
+        android:columnCount="3"
+        android:gravity="center">
+
+    </GridLayout>
+
 </RelativeLayout>
 
