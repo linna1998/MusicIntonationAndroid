@@ -17,6 +17,16 @@ public class EndGameActivity extends AppCompatActivity {
     final TextView score = findViewById(R.id.score);
     score.setText(String.valueOf(getIntent().getIntExtra("SCORE", 0)));
 
+    Button scoreboard = findViewById(R.id.scoreboard_btn);
+    scoreboard.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        Intent intent = new Intent();
+        intent.setClass(EndGameActivity.this, ScoreBoardActivity.class);
+        startActivity(intent);
+      }
+    });
+
     Button restart = findViewById(R.id.restart_btn);
     restart.setOnClickListener(new View.OnClickListener() {
       @Override

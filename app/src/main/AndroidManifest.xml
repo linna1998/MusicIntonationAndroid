@@ -3,7 +3,6 @@
     package="com.musicintonation">
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -11,8 +10,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".StartGameActivity"
-            android:label="StartGameActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="Introduction">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -20,16 +18,22 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/app_name">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".EndGameActivity"
-            android:label="EndGameActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="End Game">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ScoreBoardActivity"
+            android:label="Score Board">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
