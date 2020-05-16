@@ -51,5 +51,31 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/south"
+        android:layout_below="@id/north"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/post_to_board_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:text="@string/post_to_score_board"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/nickname_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/your_nickname"
+            android:hint="@string/your_nickname"
+            android:inputType="text" />
+
+
+    </LinearLayout>
+
 </RelativeLayout>
 

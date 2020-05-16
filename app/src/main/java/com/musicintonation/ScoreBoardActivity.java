@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.musicintonation.core.ScoreRecord;
+import com.musicintonation.database.Database;
+import com.musicintonation.database.ScoreRecord;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ScoreBoardActivity extends AppCompatActivity {
@@ -31,10 +31,7 @@ public class ScoreBoardActivity extends AppCompatActivity {
       gridLayout.addView(textView);
     }
 
-    List<ScoreRecord> records = new ArrayList<>();
-
-    records.add(new ScoreRecord("Lina", 0));
-    records.add(new ScoreRecord("Diana", 4));
+    List<ScoreRecord> records = Database.readFromDatabase();
 
     for (ScoreRecord scoreRecord : records) {
       for (String str : scoreRecord.getRecords()) {

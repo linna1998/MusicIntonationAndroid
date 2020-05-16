@@ -14,4 +14,8 @@
     <string name="end_notation">Your final score is:</string>
     <string name="scoreboard">ScoreBoard!</string>
     <string name="score_board">Score Board</string>
+    <string name="post_to_score_board">Post to score board!</string>
+    <string name="off">No</string>
+    <string name="on">Yes</string>
+    <string name="your_nickname">Your nickname</string>
 </resources>

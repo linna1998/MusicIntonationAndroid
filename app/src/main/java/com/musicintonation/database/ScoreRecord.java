@@ -1,4 +1,4 @@
-package com.musicintonation.core;
+package com.musicintonation.database;
 
 import java.util.Arrays;
 import java.util.List;

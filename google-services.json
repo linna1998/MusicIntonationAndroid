@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "847483361229",
+    "firebase_url": "https://musicintonation-a7e40.firebaseio.com",
+    "project_id": "musicintonation-a7e40",
+    "storage_bucket": "musicintonation-a7e40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847483361229:android:2b908febdbb478cb17d684",
+        "android_client_info": {
+          "package_name": "com.musicintonation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847483361229-cli7ersda09pjlrlefh2jo3tpne3jc6l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuWifcxZVOOcEwGRmq_R_Jl9oufEnIc0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847483361229-cli7ersda09pjlrlefh2jo3tpne3jc6l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
