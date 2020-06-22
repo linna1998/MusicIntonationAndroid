@@ -27,4 +27,12 @@ public enum Note {
   public String getName() {
     return name;
   }
+
+  @Override
+  public String toString() {
+    return "Note{" +
+            "hertz=" + hertz +
+            ", name='" + name + '\'' +
+            '}';
+  }
 }

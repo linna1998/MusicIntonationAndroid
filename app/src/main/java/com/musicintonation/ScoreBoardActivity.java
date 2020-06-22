@@ -9,10 +9,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.musicintonation.database.Database;
 import com.musicintonation.database.ScoreRecord;
 
-import java.util.List;
+import static com.musicintonation.database.Database.setValueEventListener;
 
 public class ScoreBoardActivity extends AppCompatActivity {
 
@@ -31,15 +30,7 @@ public class ScoreBoardActivity extends AppCompatActivity {
       gridLayout.addView(textView);
     }
 
-    List<ScoreRecord> records = Database.readFromDatabase();
-
-    for (ScoreRecord scoreRecord : records) {
-      for (String str : scoreRecord.getRecords()) {
-        TextView textView = new TextView(this);
-        textView.setText(str);
-        gridLayout.addView(textView);
-      }
-    }
+    setValueEventListener(this, gridLayout);
 
     Button restart = findViewById(R.id.restart_btn_in_scoreboard);
     restart.setOnClickListener(new View.OnClickListener() {
