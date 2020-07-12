@@ -7,14 +7,16 @@
         android:id="@+id/north"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
         android:gravity="center_horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:text="@string/start_notation"
-            android:textSize="24sp" />
+            android:textSize="66sp"
+            android:typeface="sans" />
 
     </LinearLayout>
 
@@ -25,6 +27,12 @@
         android:layout_alignParentBottom="true"
         android:gravity="center_horizontal"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" />
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/sign_in_button"

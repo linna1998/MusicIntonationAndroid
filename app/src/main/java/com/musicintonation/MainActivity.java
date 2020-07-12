@@ -22,6 +22,8 @@ import static com.musicintonation.core.MusicIntonationImplementation.NOTE_COUNT;
 
 public class MainActivity extends AppCompatActivity implements GameChangeListener {
 
+  private static final String QUESTION = "Which one of the following is ";
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -34,11 +36,11 @@ public class MainActivity extends AppCompatActivity implements GameChangeListene
     musicIntonation.startNewGame();
 
     final TextView level = findViewById(R.id.level);
-    final TextView name = findViewById(R.id.name);
+    final TextView question = findViewById(R.id.question);
     final TextView hp = findViewById(R.id.hp);
 
     level.setText(String.valueOf(musicIntonation.getLevel()));
-    name.setText(musicIntonation.getNoteName());
+    question.setText(QUESTION + musicIntonation.getNoteName());
     hp.setText(String.valueOf(musicIntonation.getHealthPoints()));
 
     final List<ImageButton> noteList = Arrays.asList(
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements GameChangeListene
         musicIntonation.randomHertz();
 
         level.setText(String.valueOf(musicIntonation.getLevel()));
-        name.setText(musicIntonation.getNoteName());
+        question.setText(QUESTION + musicIntonation.getNoteName());
         hp.setText(String.valueOf(musicIntonation.getHealthPoints()));
       }
     });

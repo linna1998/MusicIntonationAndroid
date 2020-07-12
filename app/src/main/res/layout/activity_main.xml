@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/north"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:gravity="center_horizontal"
-        android:id="@+id/north">
+        android:baselineAligned="false"
+        android:gravity="center_horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -31,34 +31,6 @@
                 android:textSize="24sp" />
         </LinearLayout>
 
-        <View
-            android:layout_width="1px"
-            android:layout_height="fill_parent" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/note"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/a5"
-                android:textSize="24sp" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="1px"
-            android:layout_height="fill_parent" />
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -79,20 +51,15 @@
                 android:textSize="24sp" />
         </LinearLayout>
 
-        <View
-            android:layout_width="1px"
-            android:layout_height="fill_parent" />
-
-
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/south"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:id="@+id/south">
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/click_btn"
@@ -104,69 +71,73 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/question"
+        android:layout_below="@id/north"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/which_one_of_the_following_is"
+        android:textSize="48sp" />
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_above="@id/south"
-        android:layout_below="@id/north"
-        android:gravity="center">
+        android:layout_above="@+id/south"
+        android:layout_below="@+id/question"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center">
+            android:baselineAligned="false">
 
-            <ImageButton
-                android:id="@+id/click_btn1"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/the_first_note_button"
-                android:scaleType="fitCenter"
-                android:background="@drawable/note_state" />
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/click_btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/note_state"
+                    android:contentDescription="@string/the_first_note_button"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/click_btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/note_state"
+                    android:contentDescription="@string/the_second_note_button"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/click_btn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/note_state"
+                    android:contentDescription="@string/the_third_note_button"
+                    android:scaleType="center" />
+            </LinearLayout>
         </LinearLayout>
 
-        <View
-            android:layout_width="1px"
-            android:layout_height="wrap_content" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <ImageButton
-                android:id="@+id/click_btn2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/the_first_note_button"
-                android:scaleType="fitCenter"
-                android:background="@drawable/note_state" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="1px"
-            android:layout_height="wrap_content" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <ImageButton
-                android:id="@+id/click_btn3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/the_first_note_button"
-                android:scaleType="fitCenter"
-                android:background="@drawable/note_state" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="1px"
-            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

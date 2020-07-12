@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,8 +29,6 @@ import com.musicintonation.core.Note;
 public class StartGameActivity extends AppCompatActivity {
 
   private static final int RC_SIGN_IN = 9001;
-  //Google Sign In Client
-  private GoogleSignInClient mGoogleSignInClient;
   //Firebase Auth
   private FirebaseAuth mAuth;
 
@@ -68,7 +67,7 @@ public class StartGameActivity extends AppCompatActivity {
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build();
-    mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+    final GoogleSignInClient mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
     mAuth = FirebaseAuth.getInstance();
 
     findViewById(R.id.sign_in_button).setOnClickListener(new View.OnClickListener() {
@@ -95,7 +94,6 @@ public class StartGameActivity extends AppCompatActivity {
 
     // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
     if (requestCode == RC_SIGN_IN) {
-      System.out.println("request code == RC_SIGN_IN");
       Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
       try {
         // Google Sign In was successful, authenticate with Firebase
@@ -130,7 +128,8 @@ public class StartGameActivity extends AppCompatActivity {
 
   private void updateUI(FirebaseUser user) {
     if (user != null) {
-      System.out.println("User: " + user);
+      TextView welcome = findViewById(R.id.welcome);
+      welcome.setText("Welcome " + user.getDisplayName() + " !");
     } else {
       System.out.println("User is null!");
     }
